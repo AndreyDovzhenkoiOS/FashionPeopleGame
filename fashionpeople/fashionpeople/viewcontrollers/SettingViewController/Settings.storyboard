@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="jKn-u8-CBZ">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="2h7-a7-sCB" customClass="SettingsViewController" customModule="LOL__dress_up_the_dolls" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hqx-8F-rFW">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eRT-eW-6Sy">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="0.37880693859999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahi-Ib-eUY">
+                                <rect key="frame" x="16" y="330.5" width="36.5" height="36.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ahi-Ib-eUY" secondAttribute="height" id="TTc-DF-vUb"/>
+                                </constraints>
+                                <state key="normal" image="backImage">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backAction:" destination="2h7-a7-sCB" eventType="touchUpInside" id="9p8-qM-gjI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvR-nn-9vd">
+                                <rect key="frame" x="233.5" y="330" width="200" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Сохранить">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.86666666670000003" green="0.87058823529999996" blue="0.86274509799999999" alpha="0.92802933679999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveAction:" destination="2h7-a7-sCB" eventType="touchUpInside" id="3xu-DA-H3J"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w0Z-h5-Aas">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="330"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2h7-a7-sCB" id="xkE-Nj-QBM"/>
+                                    <outlet property="delegate" destination="2h7-a7-sCB" id="mOq-sy-whD"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eRT-eW-6Sy" firstAttribute="top" secondItem="qlZ-VR-vcm" secondAttribute="top" id="5jo-2a-NkM"/>
+                            <constraint firstItem="hvR-nn-9vd" firstAttribute="width" secondItem="Hqx-8F-rFW" secondAttribute="width" multiplier="0.3" id="9O9-t6-lDE"/>
+                            <constraint firstItem="w0Z-h5-Aas" firstAttribute="trailing" secondItem="qlZ-VR-vcm" secondAttribute="trailing" id="9v8-YD-yhR"/>
+                            <constraint firstItem="Ahi-Ib-eUY" firstAttribute="width" secondItem="Hqx-8F-rFW" secondAttribute="width" multiplier="0.055" id="BWu-QM-i1X"/>
+                            <constraint firstItem="hvR-nn-9vd" firstAttribute="top" secondItem="w0Z-h5-Aas" secondAttribute="bottom" id="MfL-pi-Vmg"/>
+                            <constraint firstItem="qlZ-VR-vcm" firstAttribute="bottom" secondItem="eRT-eW-6Sy" secondAttribute="bottom" id="TpQ-8l-NSq"/>
+                            <constraint firstItem="qlZ-VR-vcm" firstAttribute="bottom" secondItem="hvR-nn-9vd" secondAttribute="bottom" constant="8" id="U4M-hw-izf"/>
+                            <constraint firstItem="w0Z-h5-Aas" firstAttribute="leading" secondItem="qlZ-VR-vcm" secondAttribute="leading" id="YnW-ND-ZpC"/>
+                            <constraint firstItem="eRT-eW-6Sy" firstAttribute="leading" secondItem="qlZ-VR-vcm" secondAttribute="leading" id="c8r-cq-9OW"/>
+                            <constraint firstItem="qlZ-VR-vcm" firstAttribute="bottom" secondItem="Ahi-Ib-eUY" secondAttribute="bottom" constant="8" id="f2i-w1-bea"/>
+                            <constraint firstItem="w0Z-h5-Aas" firstAttribute="height" secondItem="Hqx-8F-rFW" secondAttribute="height" multiplier="0.88" id="fDy-Gg-dXj"/>
+                            <constraint firstItem="hvR-nn-9vd" firstAttribute="centerX" secondItem="qlZ-VR-vcm" secondAttribute="centerX" id="hSz-he-k6L"/>
+                            <constraint firstItem="Ahi-Ib-eUY" firstAttribute="leading" secondItem="qlZ-VR-vcm" secondAttribute="leading" constant="16" id="tL4-Yn-MS9"/>
+                            <constraint firstItem="qlZ-VR-vcm" firstAttribute="trailing" secondItem="eRT-eW-6Sy" secondAttribute="trailing" id="uau-zt-6iR"/>
+                            <constraint firstItem="w0Z-h5-Aas" firstAttribute="top" secondItem="qlZ-VR-vcm" secondAttribute="top" id="vfg-Ag-Xrc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qlZ-VR-vcm"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="hvR-nn-9vd" id="J3w-8E-gUE"/>
+                        <outlet property="tableView" destination="w0Z-h5-Aas" id="bcG-OD-Ite"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbt-GJ-ALC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712.2938530734634" y="114.40000000000001"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backImage" width="85" height="85"/>
+    </resources>
+</document>

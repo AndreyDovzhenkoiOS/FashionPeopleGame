@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HxN-xm-zm8">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FashionPeople" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eggImage" translatesAutoresizingMaskIntoConstraints="NO" id="XcB-tO-SBn">
+                                <rect key="frame" x="206" y="76" width="253.5" height="255"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="V0a-JJ-j5P" appends="YES" id="WvZ-pG-ZIl"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUL-bO-afr">
+                                <rect key="frame" x="604.5" y="16" width="46.5" height="46.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DUL-bO-afr" secondAttribute="height" id="rMC-n7-IKT"/>
+                                </constraints>
+                                <state key="normal" image="settingImage"/>
+                                <connections>
+                                    <action selector="settinAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W86-03-1id"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQp-2g-2dJ">
+                                <rect key="frame" x="16" y="16" width="46.5" height="46.5"/>
+                                <state key="normal" image="soundOnImage"/>
+                                <connections>
+                                    <action selector="sounSwitchAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MjV-js-jEO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5If-hy-o3M">
+                                <rect key="frame" x="533" y="16" width="46.5" height="46.5"/>
+                                <state key="normal" image="share"/>
+                                <connections>
+                                    <action selector="shareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hWa-lO-aAa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5If-hy-o3M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="3im-kh-6jj"/>
+                            <constraint firstItem="CQp-2g-2dJ" firstAttribute="width" secondItem="DUL-bO-afr" secondAttribute="width" id="DM6-V1-hzZ"/>
+                            <constraint firstItem="5If-hy-o3M" firstAttribute="height" secondItem="DUL-bO-afr" secondAttribute="height" id="EsR-DN-4mK"/>
+                            <constraint firstItem="CQp-2g-2dJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="Eu9-ku-oAf"/>
+                            <constraint firstItem="5If-hy-o3M" firstAttribute="width" secondItem="DUL-bO-afr" secondAttribute="width" id="J49-bC-Uzr"/>
+                            <constraint firstItem="DUL-bO-afr" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.07" id="NIV-oq-HNl"/>
+                            <constraint firstItem="CQp-2g-2dJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PWV-vK-LHE"/>
+                            <constraint firstItem="DUL-bO-afr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="16" id="RdC-wf-trR"/>
+                            <constraint firstItem="DUL-bO-afr" firstAttribute="leading" secondItem="5If-hy-o3M" secondAttribute="trailing" constant="25" id="cBj-AJ-tFy"/>
+                            <constraint firstItem="XcB-tO-SBn" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.68" id="cNj-X8-1gJ"/>
+                            <constraint firstItem="XcB-tO-SBn" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.38" id="eDl-gu-eWG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DUL-bO-afr" secondAttribute="trailing" constant="16" id="ghg-16-4Vu"/>
+                            <constraint firstItem="XcB-tO-SBn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="naz-3j-ceL"/>
+                            <constraint firstItem="CQp-2g-2dJ" firstAttribute="height" secondItem="DUL-bO-afr" secondAttribute="height" id="x9t-hA-E1B"/>
+                            <constraint firstItem="XcB-tO-SBn" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zEL-v0-a9H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jZX-C4-lVT"/>
+                    <connections>
+                        <outlet property="eggImageView" destination="XcB-tO-SBn" id="Twx-Rx-ABl"/>
+                        <outlet property="settingButton" destination="DUL-bO-afr" id="iEj-gQ-4Bi"/>
+                        <outlet property="soundSwitchButton" destination="CQp-2g-2dJ" id="Rzj-86-MB4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="V0a-JJ-j5P">
+                    <connections>
+                        <action selector="swipeAction:" destination="BYZ-38-t0r" id="qaq-xV-dGa"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1055.6221889055473" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="txL-Z9-Dob">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HxN-xm-zm8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0VN-F6-8EX">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="32"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h9G-SR-fS8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iz0-Us-YLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eggImage" width="128" height="128"/>
+        <image name="settingImage" width="170" height="170"/>
+        <image name="share" width="256" height="256"/>
+        <image name="soundOnImage" width="50" height="50"/>
+    </resources>
+</document>
